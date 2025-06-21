@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - CleverBoard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="background-image: url('https://img.freepik.com/free-vector/gradient-connection-background_23-2150462050.jpg?t=st=1733846172~exp=1733849772~hmac=be683b3d4201ebaf47baa64e21f1e6b6fc68a0cecfce2e1d0c65c98f04b64dc7&w=740'); 
+             background-size: cover; 
+             background-repeat: no-repeat; 
+             background-position: center; 
+             min-height: 100vh; 
+             margin: 0; 
+             padding: 0;">
+
+    <div class="navbar" style="background-color: rgb(7, 5, 51); padding: 50px 20px; position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mx-5 mt-5" style="min-height: 100vh;">
+
+        <a href="{{ url_for('index') }}">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTfCziKjD65VZYMhhcbWXL7dUtL1xx8XSng3U0dgTCZdgl-D4_g"  alt="Quiz" 
+         style="width: 350px; height: auto; transition: transform 0.3s;" 
+         onmouseover="this.style.transform='scale(1.1)'" 
+         onmouseout="this.style.transform='scale(1)'">
+        </a>
+
+
+        <div class="text-center">
+            <h1 style="color: #FFFFFF; font-style: italic;">Welcome, {{ user.username }}!</h1>
+            <h2 style="color: #ffffff9c; font-style: italic;">This is your dashboard.</h2>
+            <a href="{{ url_for('index') }}" class="btn btn-info mt-3" style="font-size: large;">Start Generating Quiz</a>
+            <a href="{{ url_for('task_manager') }}" class="btn btn-info mt-3" style="font-size: large;">Open Task Manager</a>
+            <a href="{{ url_for('logout') }}" class="btn btn-outline-danger mt-3 ml-2" style="font-size: large;">Logout</a>
+        </div>
+
+        <a href="{{ url_for('task_manager') }}">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKfRczVQJGItEGoRDPfE_He8CDQKHFCgzJ_vRdhjPrFOeYzd1f"  alt="Quiz" 
+         style="width: 350px; height: auto; transition: transform 0.3s;" 
+         onmouseover="this.style.transform='scale(1.1)'" 
+         onmouseout="this.style.transform='scale(1)'">
+        </a>
+    </div>
+
+</body>
+</html>
